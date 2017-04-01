@@ -116,13 +116,15 @@ def getRenderLayersNodes(renderLayerName):
     
     renderLayerNodes = []
     
-    for node in bpy.context.scene.node_tree.nodes:
-        
-        if node.type == 'R_LAYERS':
-            
-            if node.layer == renderLayerName:
+    if bpy.context.scene.node_tree:
     
-                renderLayerNodes.append(node)
+        for node in bpy.context.scene.node_tree.nodes:
+            
+            if node.type == 'R_LAYERS':
+                
+                if node.layer == renderLayerName:
+        
+                    renderLayerNodes.append(node)
 
     return renderLayerNodes
     
