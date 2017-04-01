@@ -209,8 +209,11 @@ def moveRenderLayer(direction):
         
     swapRenderLayers(layers[targetLayerIndex].name, layers[layers.active_index].name)
     swapRenderLayerNodes(layers[targetLayerIndex].name, layers[layers.active_index].name)
-    swapAnimationData(layers[targetLayerIndex].name, layers[layers.active_index].name, "fcurves")
-    swapAnimationData(layers[targetLayerIndex].name, layers[layers.active_index].name, "drivers")
+    
+    if bpy.context.scene.animation_data:    
+    
+        swapAnimationData(layers[targetLayerIndex].name, layers[layers.active_index].name, "fcurves")
+        swapAnimationData(layers[targetLayerIndex].name, layers[layers.active_index].name, "drivers")
     
     layers.active_index = targetLayerIndex
 
