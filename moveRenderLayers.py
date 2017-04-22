@@ -128,7 +128,7 @@ def getRenderLayersNodes(renderLayerName):
             
                         renderLayerNodes.append(node)
 
-        return renderLayerNodes
+    return renderLayerNodes
     
 
 
