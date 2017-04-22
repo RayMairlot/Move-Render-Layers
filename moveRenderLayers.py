@@ -1,7 +1,7 @@
 bl_info = {
     "name": "Move Render Layers",
     "author": "Ray Mairlot",
-    "version": (1, 0),
+    "version": (1, 0, 1),
     "blender": (2, 78, 0),
     "location": "Properties Editor> Render Layers",
     "description": "Adds 'up' and 'down' arrows for moving render layers up or down the render layers list",
